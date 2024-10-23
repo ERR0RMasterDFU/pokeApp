@@ -12,6 +12,6 @@ export class GamesListService {
 
   getGamesList(): Observable<GamesListResponse> {
     return this.http.get<GamesListResponse>('https://pokeapi.co/api/v2/version-group'); 
-    // Para juegos por separado: https://pokeapi.co/api/v2/version
+    // Para juegos por separado: https://pokeapi.co/api/v2/version // https://pokeapi.co/api/v2/version-group
   }
 }
