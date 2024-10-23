@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { GamesListComponent } from './components/games-list/games-list.component
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync(),
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
