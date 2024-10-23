@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg fixed-top fondoNav border border-start-0 border-end-0 border-top-0 border-3 border-black">
+    <div class="container-fluid">
+        <img class="navbar-brand logoSize" [src]="logoPokedex">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex justify-content-around w-100">
+                <li class="nav-item">
+                    <h2 class="m-0 px-3 bg-light rounded-pill"><a class="nav-link" routerLink="pokemon" routerLinkActive="active"><i class="bi bi-record-circle-fill"></i><strong>&nbsp;POKÉMON</strong></a></h2>
+                </li>
+                <li class="nav-item">
+                    <h2 class="m-0 px-3 bg-light rounded-pill"><a class="nav-link" routerLink="games" routerLinkActive="active"><i class="bi bi-x-diamond-fill"></i><strong>&nbsp;VIDEOJUEGOS</strong></a></h2>
+                </li>
+                <li class="nav-item">
+                    <h2 class="m-0 px-3 bg-light rounded-pill"><a class="nav-link" routerLink="items" routerLinkActive="active"><i class="bi bi-backpack2-fill"></i><strong>&nbsp;OBJETOS</strong></a></h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
