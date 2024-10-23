@@ -8,12 +8,14 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
-    GamesListComponent
+    GamesListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
