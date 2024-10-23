@@ -1,1 +1,14 @@
-<p>pokemon-list works!</p>
+<div class="container-fluid text-center my-4">
+    <div class="row d-flex justify-content-center">
+        @for(pokemon of pokemonList; track pokemon.url) {
+            <div class="card px-0 border border-black border-3 m-2 rounded-0" style="width: 17rem;">
+                <div class="card-img-wrapper" style="position: relative; background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ac200a16-4aaf-4a2d-a830-9a25f292e5bf/d2temnn-33c666eb-69ab-4fea-99a6-58578928a1d1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9hYzIwMGExNi00YWFmLTRhMmQtYTgzMC05YTI1ZjI5MmU1YmYvZDJ0ZW1ubi0zM2M2NjZlYi02OWFiLTRmZWEtOTlhNi01ODU3ODkyOGExZDEucG5nIn1dXX0.p59hJ9YEurOxm83lqE3ShtG0raIwUV1STGVi7_1RvqY'); background-size: cover;">
+                    <img [src]="getImagen(pokemon.url)" class="card-img-top rounded-0" [alt]="pokemon.name">
+                </div>
+                <div class="card-body bgTextCard border border-3 border-black border-start-0 border-end-0 border-bottom-0 d-flex align-items-center justify-content-center">
+                    <h5 class="card-title m-0 text-uppercase"><strong>{{ pokemon.name }}</strong></h5>
+                </div>
+            </div>
+        }
+    </div>
+</div>
