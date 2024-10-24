@@ -1,12 +1,12 @@
 <div class="container-fluid text-center my-4">
     <div class="row d-flex justify-content-center">
-        @for(pokemon of pokemonList; track pokemon.url) {
+        @for(item of listadoItems; track item.url) {
             <div class="card px-0 border border-black border-3 m-2 rounded-0" style="width: 17rem;">
                 <div class="card-img-wrapper bgCard">
-                    <img [src]="getImagen(pokemon.url)" class="card-img-top rounded-0" [alt]="pokemon.name">
+                    <img [src]="getImagen(item.name)" class="card-img-top rounded-0" [alt]="item.name">
                 </div>
                 <div class="card-body bgTextCard border border-3 border-black border-start-0 border-end-0 border-bottom-0 d-flex align-items-center justify-content-center">
-                    <h5 class="card-title m-0 text-uppercase"><strong>{{ pokemon.name }}</strong></h5>
+                    <h5 class="card-title m-0 text-uppercase"><strong>{{ item.name }}</strong></h5>
                 </div>
             </div>
         }
