@@ -1,0 +1,12 @@
+<div class="card fondoCard p-3 rounded-4 border border-3 border-black position-absolute top-50 start-50 translate-middle" style="width: 47rem;">
+    <div class="d-flex w-100">
+        <div>
+            <img class="itemImagen rounded-4 fondoImagen border border-3 border-black" [src]="item!.sprites.default" [alt]="getTextEsNames(item!.names)">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <p class="card-text mb-auto nombre text-uppercase fw-bold bg-black text-white text-center py-1 rounded-2 border border-3 border-black" [innerText]="getTextEsNames(item!.names)"></p>
+            <p class="card-text bg-white m-0 text-center py-2 rounded-2 border border-3 border-black" [innerText]="getTextEsFlavor(item!.flavor_text_entries)"></p>
+            <p class="card-text bg-white py-2 text-center m-0 rounded-2 border border-3 border-black mt-auto"><strong>COSTE:</strong> {{ item!.cost == 0 ? 'GRATIS' : item!.cost+' Pokécuartos' }}</p>
+        </div>
+    </div>
+</div>
