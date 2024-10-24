@@ -1,16 +1,4 @@
-export interface ItemsListResponse {
-    count: number
-    next: string
-    previous: any
-    results: ItemsList[]
-}
-  
-export interface ItemsList {
-    name: string
-    url: string
-}
-
-export interface Item {
+export interface ItemsDetailResponse {
     attributes: Attribute[]
     baby_trigger_for: any
     category: Category

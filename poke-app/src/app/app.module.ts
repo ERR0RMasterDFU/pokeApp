@@ -10,6 +10,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideHttpClient } from '@angular/common/http';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ItemsListComponent } from './components/items-list/items-list.component
     PokemonListComponent,
     GamesListComponent,
     NavbarComponent,
-    ItemsListComponent
+    ItemsListComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,
