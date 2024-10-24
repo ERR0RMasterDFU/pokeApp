@@ -1,0 +1,17 @@
+.itemImagen {
+    width: 280px;
+}
+
+.nombre {
+    font-size: 20px;
+}
+
+.fondoImagen {
+    background-position-x: center;
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-efecto-zoom-degradado_23-2149722799.jpg'); 
+    background-size: cover;
+}
+
+.fondoCard {
+    background-color: #C1C1C1;
+}

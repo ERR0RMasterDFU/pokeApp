@@ -16,6 +16,6 @@ export class ItemsListService {
   }
 
   getItem(id: number): Observable<ItemsDetailResponse> {
-    return this.http.get<ItemsDetailResponse>(`https://pokeapi.co/api/v2/item/${id}/`);
+    return this.http.get<ItemsDetailResponse>(`https://pokeapi.co/api/v2/item/${id}`);
   }
 }
