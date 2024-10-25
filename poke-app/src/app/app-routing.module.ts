@@ -4,12 +4,14 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
 const routes: Routes = [
   {path:'pokemon', component: PokemonListComponent},
   {path:'games', component: GamesListComponent},
   {path:'items', component: ItemsListComponent},
   {path:'items/detail/:id', component: ItemDetailComponent},
+  {path:'pokemon/detail/:name', component: PokemonDetailComponent},
   {path: '', redirectTo: 'pokemon', pathMatch: 'full'}
 ];
 

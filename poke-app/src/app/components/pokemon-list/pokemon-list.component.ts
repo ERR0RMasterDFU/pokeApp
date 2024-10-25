@@ -25,5 +25,4 @@ export class PokemonListComponent implements OnInit{
     return this.imagen.concat(id + '.png');
   }
 
-
 }
