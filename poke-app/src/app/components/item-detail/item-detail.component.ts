@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FlavorTextEntry, ItemsDetailResponse, Name } from '../../models/items-details-response.interfaces';
 import { ActivatedRoute } from '@angular/router';
 import { ItemsListService } from '../../services/items-list.service';
-import { Item, ItemsListResponse } from '../../models/items.iterfaces';
 
 @Component({
   selector: 'app-item-detail',

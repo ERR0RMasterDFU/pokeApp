@@ -1,0 +1,90 @@
+<div class="modal fade" id="detalles" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered" style="height: 400px;">
+        <div class="modal-content d-flex flex-row fondoModal">
+            <div>
+                <img class="bg-dark bg-opacity-25" [src]="pokemon!.sprites.front_default" [alt]="pokemon!.name" width="400" height="400"/>
+            </div>
+            <div class="modal-body">
+                <div class="text-end"><button type="button" class="btn-close mb-4" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="d-flex justify-content-between bg-dark mx-4 px-4 py-1">
+                    <div class="text-light"><strong>Nº <span>{{pokemon!.id}}</span></strong></div>
+                    <div class="text-light"><strong>{{pokemon!.name}}</strong></div>
+                    <div class="text-light"><i class="bi bi-gender-male azul"></i><i class="bi bi-gender-female rosa"></i></div>
+                </div>
+                <div class="bg-light text-center mx-4 my-2 py-1">TEXTO</div>
+                <div class="bg-light mx-4 my-2 py-1">
+                    <div class="d-flex justify-content-around w-100">
+                        <div class="w-50 text-center"><strong>TIPO</strong></div>
+                        <div class="w-50 text-center" id="modalPokemonType">{{pokemon!.types}}</div>
+                    </div>
+                    <div class="d-flex justify-content-around w-100">
+                        <div class="w-50 text-center"><strong>ALTURA</strong></div>
+                        <div class="w-50 text-center" id="modalPokemonHeight">{{pokemon!.height}}</div>
+                    </div>
+                    <div class="d-flex justify-content-around w-100">
+                        <div class="w-50 text-center"><strong>PESO</strong></div>
+                        <div class="w-50 text-center" id="modalPokemonWeight">{{pokemon!.weight}}</div>
+                    </div>
+                    <div class="d-flex justify-content-around w-100">
+                        <div class="w-50 text-center"><strong>GENERACIÓN</strong></div>
+                        <div class="w-50 text-center" id="modalPokemonGeneration">TEXTO</div>
+                    </div>
+                </div>
+                <div class="bg-light text-center mx-4 px-4 py-1" id="modalPokemonDescription">Descripción del Pokémon no disponible.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="card p-3 rounded-4 border border-3 border-black position-absolute top-50 start-50 translate-middle" [style]="getBgCardColor(pokemon!.types[0].type.name)" style="width: 70rem;">
+    <div class="d-flex w-100">
+        <div>
+            <img class="bg-dark bg-opacity-25" [src]="pokemon!.sprites.front_default" [alt]="pokemon!.name" width="300" height="300"/>
+        </div>
+        <div class="card-body d-flex flex-column">
+
+            <!-- PRIMAR FILA -->
+            <div class="d-flex justify-content-between bg-dark text-uppercase px-3 py-1 mb-2 mt-auto">
+                <div class="text-light"><strong>Nº <span>{{pokemon!.id}}</span></strong></div>
+                <div class="text-light"><strong>{{pokemon!.name}}</strong></div>
+                <div class="text-light"><i class="bi bi-gender-male azul"></i><i class="bi bi-gender-female rosa"></i></div>
+            </div>
+            
+            <!-- SEGUNDA FILA -->
+            <div class="bg-light text-center my-2 py-1">TEXTO</div>
+
+            <!-- TERCER CUADRADO -->
+            <div class="bg-light my-2 py-1">
+                <div class="d-flex justify-content-around w-100">
+                    <div class="w-50 text-center"><strong>TIPO</strong></div>
+                    <div class="w-50 text-center d-flex justify-content-center">
+                        @for (tipo of pokemon!.types; track $index) {
+                            <span class="m-0 text-capitalize">{{tipo!.type!.name}}</span>
+                            @if ($index < pokemon!.types.length - 1) {
+                                <span>&nbsp;/&nbsp;</span>
+                            }
+                        }
+                    </div>
+                    
+                </div>
+                <div class="d-flex justify-content-around w-100">
+                    <div class="w-50 text-center"><strong>ALTURA</strong></div>
+                    <div class="w-50 text-center" [innerText]="getPesoYAlturaCorrectos(pokemon!.height)+' m'"></div>
+                </div>
+                <div class="d-flex justify-content-around w-100">
+                    <div class="w-50 text-center"><strong>PESO</strong></div>
+                    <div class="w-50 text-center" [innerText]="getPesoYAlturaCorrectos(pokemon!.weight)+' Kg'"></div>
+                </div>
+                <div class="d-flex justify-content-around w-100">
+                    <div class="w-50 text-center"><strong>GENERACIÓN</strong></div>
+                    <div class="w-50 text-center" id="modalPokemonGeneration">TEXTO</div>
+                </div>
+            </div>
+
+            <!-- CUARTA FILA -->
+            <div class="bg-light text-center px-4 py-1 mt-2 mb-auto" id="modalPokemonDescription">Descripción del Pokémon no disponible.</div>    
+        </div>
+    </div>
+</div>
